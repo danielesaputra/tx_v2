@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TukangXpress_v2.Models.Admin>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+
+    @using (Html.BeginForm("Index", "Admins", FormMethod.Get))
+    {
+         <p> Search by Name: @Html.TextBox("SearchString") <br />  <br /> 
+         <input type="submit" value="Search" /></p>
+    } 
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name_admin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password_admin)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name_admin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password_admin)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
