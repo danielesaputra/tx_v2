@@ -197,6 +197,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminsController.cs" />
+    <Compile Include="Controllers\CustomerDatasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MsCustomersController.cs" />
@@ -206,6 +207,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\CustomerData.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MsCustomer.cs" />
@@ -220,6 +222,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\logo.png" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -299,6 +302,11 @@
     <Content Include="Views\MsVendors\Details.cshtml" />
     <Content Include="Views\MsVendors\Edit.cshtml" />
     <Content Include="Views\MsVendors\Index.cshtml" />
+    <Content Include="Views\CustomerDatas\Create.cshtml" />
+    <Content Include="Views\CustomerDatas\Delete.cshtml" />
+    <Content Include="Views\CustomerDatas\Details.cshtml" />
+    <Content Include="Views\CustomerDatas\Edit.cshtml" />
+    <Content Include="Views\CustomerDatas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

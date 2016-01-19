@@ -20,16 +20,16 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Vendor_ID)
+            <center>Vendor ID</center>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Vendor_Email)
+            <center>Vendor Email</center>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Vendor_Balance)
+            <center>Vendor Balance</center>
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
+            <center>Password</center>
         </th>
         <th></th>
     </tr>
@@ -37,21 +37,23 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Vendor_ID)
+            <center>@Html.DisplayFor(modelItem => item.Vendor_ID)</center>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Vendor_Email)
+            <center>@Html.DisplayFor(modelItem => item.Vendor_Email)</center>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Vendor_Balance)
+            <center>@Html.DisplayFor(modelItem => item.Vendor_Balance)</center>
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Password)
+            <center>@Html.DisplayFor(modelItem => item.Password)</center>
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            <center>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </center>
         </td>
     </tr>
 }
