@@ -11,6 +11,9 @@ namespace TukangXpress_v2.Models
         public int ID { get; set; }
         public int Customer_Data_ID { get; set; }
         public int Customer_ID { get; set; }
+
+        //public virtual MsCustomer CustID { get; set; }
+
         public string Facebook_ID { get; set; }
         public string First_Name { get; set; }
         public string Last_Name { get; set; }

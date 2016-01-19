@@ -14,6 +14,8 @@ namespace TukangXpress_v2.Models
         public int Customer_Balance { get; set; }
         public int Reward_Point { get; set; }
         public string Password { get; set; }
+
+        //public virtual ICollection<CustomerData> CustomerDatas { get; set; }
     }
 
     public class MsCustomerDBContext : DbContext
