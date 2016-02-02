@@ -9,6 +9,8 @@
 
 </head>
 <body>
+    <div id="wrapper">
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -21,7 +23,7 @@
                 <div class="navbar-brand"><img height="20px" src="~/Image/logo.png" /></div>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                @*<ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Customer", "Index", "CUSTOMER_DATA")</li>
                     <li>@Html.ActionLink("Customer Login", "Index", "CUSTOMER_LOGIN")</li>
                     <li>@Html.ActionLink("Vendor", "Index", "VENDOR_DATA")</li>
@@ -30,21 +32,33 @@
                     <li>@Html.ActionLink("Bidder", "Index", "BIDDERs")</li>
                     <li>@Html.ActionLink("Transaction", "Index", "TRANS_DETAILS")</li>
                     <li>@Html.ActionLink("Review", "Index", "REVIEWs")</li>
-                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                </ul>
+                </ul>*@
                 @Html.Partial("_LoginPartial")
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>@Html.ActionLink("Customer", "Index", "CUSTOMER_DATA")</li>
+                    <li>@Html.ActionLink("Customer Login", "Index", "CUSTOMER_LOGIN")</li>
+                    <li>@Html.ActionLink("Vendor", "Index", "VENDOR_DATA")</li>
+                    <li>@Html.ActionLink("Vendor Login", "Index", "VENDOR_LOGIN")</li>
+                    <li>@Html.ActionLink("Project", "Index", "PROJECT_MASTER")</li>
+                    <li>@Html.ActionLink("Bidder", "Index", "BIDDERs")</li>
+                    <li>@Html.ActionLink("Transaction", "Index", "TRANS_DETAILS")</li>
+                    <li>@Html.ActionLink("Review", "Index", "REVIEWs")</li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - TukangXpress</p>
-        </footer>
+    <div id="page-wrapper">
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - TukangXpress</p>
+            </footer>
+        </div>
     </div>
-
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
