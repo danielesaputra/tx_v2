@@ -1,0 +1,69 @@
+﻿@model IEnumerable<TukangXpress_v2.Models.VENDOR_DATA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Vendor</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Vendor ID
+        </th>
+        <th>
+            Login ID
+        </th>
+        <th>
+            Vendor Name
+        </th>
+        <th>
+            Owner
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Balance
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendordata_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VENDOR_LOGIN.vendorlogin_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendor_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendor_ownername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendor_phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendor_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vendor_balance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.vendordata_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vendordata_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vendordata_ID })
+        </td>
+    </tr>
+}
+
+</table>

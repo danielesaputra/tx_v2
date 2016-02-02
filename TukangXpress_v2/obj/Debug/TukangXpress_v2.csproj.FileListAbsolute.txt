@@ -79,3 +79,4 @@ c:\users\daniel esaputra\documents\visual studio 2015\Projects\TukangXpress_v2\T
 c:\users\daniel esaputra\documents\visual studio 2015\Projects\TukangXpress_v2\TukangXpress_v2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\users\daniel esaputra\documents\visual studio 2015\Projects\TukangXpress_v2\TukangXpress_v2\obj\Debug\TukangXpress_v2.dll
 c:\users\daniel esaputra\documents\visual studio 2015\Projects\TukangXpress_v2\TukangXpress_v2\obj\Debug\TukangXpress_v2.pdb
+C:\Users\Daniel Esaputra\Documents\Visual Studio 2015\Projects\TukangXpress_v2\TukangXpress_v2\obj\Debug\TukangXpress_v2.csprojResolveAssemblyReference.cache

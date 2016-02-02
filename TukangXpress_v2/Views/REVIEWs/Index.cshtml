@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TukangXpress_v2.Models.REVIEW>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Review</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Review ID
+        </th>
+        <th>
+            Vendor ID
+        </th>
+        <th>
+            Project ID
+        </th>
+        <th>
+            Details
+        </th>
+        <th>
+            Point
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.review_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VENDOR_DATA.vendordata_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROJECT_MASTER.project_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.point)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.review_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.review_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.review_ID })
+        </td>
+    </tr>
+}
+
+</table>

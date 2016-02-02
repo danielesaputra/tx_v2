@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TukangXpress_v2.Models.PROJECT_MASTER>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Project</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Project ID
+        </th>
+        <th>
+            Customer ID
+        </th>
+        <th>
+            Project Category
+        </th>
+        <th>
+            Project Duedate
+        </th>
+        <th>
+            Additional Info
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUSTOMER_DATA.customerdata_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_duedate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.project_additionalinfo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.project_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.project_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.project_ID })
+        </td>
+    </tr>
+}
+
+</table>

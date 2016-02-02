@@ -1,0 +1,87 @@
+﻿@model IEnumerable<TukangXpress_v2.Models.CUSTOMER_DATA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Customer</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Customer ID
+        </th>
+        <th>
+            Login ID
+        </th>
+        <th>
+            Firstname
+        </th>
+        <th>
+            Lastname
+        </th>
+        <th>
+            Birthdate
+        </th>
+        <th>
+            Phone Number
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Facebook
+        </th>
+        <th>
+            Balance
+        </th>
+        <th>
+            Reward Point
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.customerdata_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CUSTOMER_LOGIN.customerlogin_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_birthdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_facebook)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_balance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer_rewardpt)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.customerdata_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.customerdata_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.customerdata_ID })
+        </td>
+    </tr>
+}
+
+</table>
